@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>请注册</title>
+  <iframe src="header.html" frameborder="0" width=100% height="170px" marginwidth=0 marginheight=0 frameborder="no" border="0" ></iframe>
+  <script>
+function reg(){
+var $phone=phone.value;
+var $uname=uname.value;
+var $upwd=upwd.value;
+  var xhr=new XMLHttpRequest;
+  xhr.onreadystatechange=function(){ 
+   if(xhr.readyState==4&&xhr.status==200){
+     console.log(xhr.readyState);
+   var result=xhr.responseText;
+   if(result==1){alert("注册成功");
+   
+   }else if(result==0){alert("用户名已存在");}
+   }
+  }
+  xhr.open("post","/pro/v1/regpro",true);
+  var formdata="uname="+$uname+"&upwd="+$upwd+"&phone="+$phone;
+  //请求主体中有特殊字符，必须要改请求头 必须在open()和send()之间
+    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    xhr.send(formdata);
+    console.log(formdata);
+  }
+  function isRepeate(){
+  var $uname=uname.value;
+  var xhr=new XMLHttpRequest();
+  xhr.onreadystatechange=function(){
+  if(xhr.readyState==4&&xhr.status==200){
+  var result=xhr.responseText;
+  if(result==1){s1.innerHTML=`该用户名已经存在`;}else{s1.innerHTML=`该用户名可用`;}
+  }
+  }
+  xhr.open("get","/pro/v1/isRepeate/"+$uname,true);
+  xhr.send();
+  }
+  function isRepeate1(){
+  if(upwd.value!==upwd1.value){s2.innerHTML=`密码输入不一致`;}else{s2.innerHTML=`输入正确`;}
+}
+</script>
+  <style>
+  body{
+  margin:0;
+/*  background-color:rgba(0,0,0,0.2);*/
+  background-image:url("img/fc34870a4481467938a2334962381b15ac28ec43.jpg");
+    background-repeat:no-repeat;
+    background-position:0px 0px;
+/*    background-size:100%;*/
+    background-size:cover;
+/*    background-size:;*/
+     font-size: 100%;
+    line-height: 1.5;
+    font-family: Lucida Grande,Lucida Sans Unicode,Tahoma,Helvetica,Arial,Hiragino Sans GB,sans-serif;
+}
+div{
+margin-left:65%;
+margin-top:0px;
+    width:28%;
+   border:5px solid #cccccc;
+}
+#d2 img{    width: 19%;
+    margin-top: 0px;
+    padding-top: 4px;
+    padding-left: 3px;
+    height: 20px;
+}
+#d2{
+    margin-top: 124px;
+      border-bottom:0px;}
+ #d2 span{
+ padding-left:14px;
+/*         margin-left:35%;*/
+         font: 400 24px/44px 'Microsoft Yahei';    
+  }
+  #d1{border-top:0px;}
+  input{height:26px;
+  border-color:#ccc;
+  outline:0;
+  padding-left:30px;
+  margin-bottom:2px;
+    margin-top:10px;
+  background:rgba(f,0,0,0.1);}
+  .td_align{text-align: right;}
+ .td_align span{color:#ff0000}
+ #d1 img{margin-left:10px;
+ padding-top:5px;
+ }
+ div button{margin-left:10px;
+ background-color:#ffcc00;
+ outline-color:#cccccc;
+ }
+ div table a{font-size:3px;}
+ .inputbox{ height:10px;}
+ .inputreg{ width:120px; background: #333;margin-left:30px;}
+ .inputreg span{color:#ffffff;font-size:20px;}
+  </style>
+</head>
+<body>
+<div id="d2">
+ <img src="img/d685442b6a79161a5eaa55e27046873b7ce2e372.png" alt=""><span>用户注册</span>
+</div>
+<div id="d1">
+  <table>
+    <tr>
+      <td width="100px" class="td_align"><span>*</span>用户名：</td>
+      <td><input type="text" id="uname" size=40 placeholder="请输入用户名" onblur="isRepeate()"><span id="s1"></span></td>
+    </tr>
+    <tr>
+      <td width="100px" class="td_align"><span>*</span>手机号：</td>
+      <td><input type="text" id="phone" size=40 placeholder="请输入11位手机号"></td>
+    </tr>
+    <tr>
+      <td width="100px" class="td_align"><span>*</span>密码：</td>
+      <td><input type="password" id="upwd" size=40 placeholder="6-20个字符,请不要输入非法字符"></td>
+    </tr>
+    <tr>
+      <td width="100px" class="td_align"><span>*</span>确认密码：</td>
+      <td><input type="password" id="upwd1" size=40 placeholder="再次填写密码" onblur="isRepeate1()"><span id="s2"></span></td>
+    </tr>
+    <tr>
+   <td width="110px" class="td_align"><span>*</span>图文验证码：</td>
+      <td><input type="text" id="vcode" size=20 placeholder="填写验证码"><img src="img/index-gen_vcode-LOGINVCODE-4.png" alt=""><a href="#">看不清楚?换一个</a></td>
+    </tr>
+    <tr>
+      <td width="100px" class="td_align"><span>*</span>验证码：</td>
+      <td><input type="text" id="mcode" size=20><button><a>获取短信验证码</a></button></td>
+    </tr>
+    <tr>
+    <td width="100px" class="td_align"></td>
+      <td><input type="checkbox" value="box" class="inputbox"><a>我已阅读并同意</a><a href="#">会员注册协议</a><a>和</a><a href="#">隐私保护政策</a></td>
+    </tr>
+     <tr>
+     <td width="100px" class="td_align"></td>
+      <td><button onclick="reg()" class="inputreg"><span>注册</span></button></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
