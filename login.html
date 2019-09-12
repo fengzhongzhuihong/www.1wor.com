@@ -1,117 +1,56 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <title>请登录</title>
-  <iframe src="header.html" frameborder="0" width=100% height="170px" marginwidth=0 marginheight=0 frameborder="no" border="0" ></iframe>
- <style>
- body{
-  background-image:url("img/fc34870a4481467938a2334962381b15ac28ec43.jpg");
-    background-repeat:no-repeat;
-    background-position:0px 0px;
-/*    background-size:100%;*/
-    background-size:cover;
-/*    background-size:;*/
-     font-size: 100%;
-     margin:0px;
- }
-  #d1{
-   width: 450px;
-/*   background-color: rgba(0,0,0,0.2);*/
-   border:5px solid #cccccc;
-   margin-left:70%;
-margin-top:10%;
-  }
-  #d1 h2{
-      color: #333;
-    font-size: 30px;
-    text-align: center;
-    height: 43px;
-    line-height: 40px;
-  }
-  .inputtext{
-  width:95%;
-  height: 41px;
-  line-height: 25px;
-  padding: 8px 10px 8px 45px;
-  box-sizing:border-box;
- border-color:#ccc;
-  margin-top:10px;
-  margin-left:10px;
-  outline:0;
-  }
-  #d2{
-  padding-left:10px;
-  }
-  .class_ul{padding-left:0;
-  }
-  .class-ul li{line-height: 30px;
-  }
-  .class-ul span{line-height: 30px;
-  }
-  .class_ul img{width:30px;
-  height:30px;}
-  .class_ul label,#box,#box1{    vertical-align: top;
-    font-size: 16px;
-    height: 20px;}
-  ul button{        padding: 10px  180px;
-  margin-left:13px;
-    background: #333;
-    font-size: 126%;
-    color:#fff;
-     outline-color:#cccccc;}
-    div a{text-decoration:none;}
-    #d3{
-    margin-bottom:5px;
-    font-weight: bold;
-    }
-  #d4 img{    width: 19%;
-    margin-top: 0px;
-    padding-top: 4px;
-    padding-left: 3px;
-    height: 20px;
+
+<head>
+    <meta charset="UTF-8">
+    <title>请登录</title>
+    <iframe src="header.html" frameborder="0" width=100% height="167px" marginwidth=0 marginheight=0 frameborder="no"
+        border="0"></iframe>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/vue.js"></script>
+    <script src="js/login.js"> </script>
+    <style>
+    body {
+  background-image: url("img/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  /*    background-size:100%;*/
+  background-size: cover;
+  /*    background-size:;*/
+  font-size: 100%;
+  margin: 0px;
+  padding: 0;
 }
-#d4{
-    margin-top: 12px;
-      border-bottom:0px;}
- #d4 span{
- padding-left:14px;
-/*         margin-left:35%;*/
-         font: 400 24px/44px 'Microsoft Yahei';    
-  }
-  .float_right{ float:right; margin-right:50px;}
-  .float_left{margin-left:40px;}
- </style>
- <script>
- function get_login(){
- var $uname=uname.value;
- var $upwd=upwd.value;
- var xhr=new XMLHttpRquest();
- xhr.onreadystatechange=function(){
- if(xhr.readyState==4&&xhr.status==200){
- var result=xhr.responseText;
- if(result==1){alert("登录成功");}else{alert("用户名或者密码错误");}
- }
- }
- xhr.open("get","pro/v1/login/"+$uname+"&"+$upwd,true);
- xhr.send();
- }
- </script>
- </head>
- <body>
- <div id="d1">
- <div id="d4">
- <img src="img/d685442b6a79161a5eaa55e27046873b7ce2e372.png" alt=""><span>用户登录</span>
- </div>
- <input type="text" placeholder="用户名/邮箱地址/手机号" class="inputtext" id="uname"><br>
- <input type="text" placeholder="填写密码" class="inputtext" id="upwd"><br>
-<div id="d2">
-<ul type="none" class="class_ul">
-  <li><input type="checkbox" id="box" size="15px"><label for="box">记住密码</label> <input type="checkbox" id="box1"><label for="box1">两周内自动登录</label><img src="img/qqlogin.png" alt=""><img src="img/weibo.png" alt=""><img src="img/weixin.png" alt=""></li>
-  <li><button  onclick="get_login()">登录</button><br></li>
-</ul>
-<div id="d3"><span class="float_left"><a href="#">立即注册</a></span>
-<span class="float_right"><a href="#">忘记密码？</a></span></div>
-</div>
- </div>
- </body>
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d4">
+            <img src="img/d685442b6a79161a5eaa55e27046873b7ce2e372.png" alt=""><span>用户登录</span>
+        </div>
+        <input type="text" placeholder="用户名/邮箱地址/手机号" class="inputtext" id="uname" v-model="uname"><br>
+        <input type="password" placeholder="填写密码" class="inputtext" id="upwd" v-model="upwd"><br>
+        <div id="d2">
+            <ul type="none" class="class_ul">
+                <li><input type="checkbox" id="box" size="15px"><label for="box">记住密码</label> <input type="checkbox"
+                        id="box1"><label for="box1">两周内自动登录</label><img src="img/qqlogin.png" alt=""><img
+                        src="img/weibo.png" alt=""><img src="img/weixin.png" alt=""></li>
+                <li><button onclick="get_login()">登录</button><br></li>
+            </ul>
+            <div id="d3"><span class="float_left"><a href="#">立即注册</a></span>
+                <span class="float_right"><a href="#">忘记密码？</a></span></div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br>
+    <br />
+    <div>
+        <iframe src="footer.html" frameborder="0" width=100% height="345px" marginwidth=0 marginheight=0
+            frameborder="no" border="0" class="" scrolling="no"></iframe></div>
+</body>
+
 </html>

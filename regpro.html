@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title> new document </title>
+  <script>
+  function post_reg(){
+    var $uname=uname.value;
+    var $upwd=upwd.value;
+    var $email=email.value;
+    var $phone=phone.value;
+  var xhr=new XMLHttpRequest;
+  xhr.onreadystatechange=function(){ 
+   if(xhr.readyState==4&&xhr.status==200){
+     console.log(xhr.readyState);
+   var result=xhr.responseText;
+   if(result==1){alert("注册成功");}else if(result==0){alert("用户名已存在");}
+   }
+  }
+  xhr.open("post","/pro/v1/regpro",true);
+  var formdata="uname="+$uname+"&upwd="+$upwd+"&email="+$email+"&phone="+$phone;
+  //请求主体中有特殊字符，必须要改请求头 必须在open()和send()之间
+    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    xhr.send(formdata);
+    console.log(formdata);
+  }
+  function isRepeate(){
+  var $uname=uname.value;
+  var xhr=new XMLHttpRequest();
+  xhr.onreadystatechange=function(){
+  if(xhr.readyState==4&&xhr.status==200){
+  var result=xhr.responseText;
+  if(result==1){s1.innerHTML=`该用户名已经存在`;}else{s1.innerHTML=`该用户名可用`;}
+  }
+  }
+  xhr.open("get","/pro/v1/isRepeate/"+$uname,true);
+  xhr.send();
+  }
+  function isRepeate1(){
+  if(upwd.value!==upwd1.value){s2.innerHTML=`密码输入不一致`;}
+  }
+  </script>
+ </head>
+ <body>
+  用户名<input type="text" id="uname" onblur="isRepeate()"><span id="s1" TextView="2px"></span><br>
+  密码<input type="text" id="upwd"><br>
+  密码<input type="text" id="upwd1" onblur="isRepeate1()"><span id="s2" size="2px"></span><br>
+  邮箱<input type="text" id="email"><br>
+  手机<input type="text" id="phone"><br>
+  <button onclick="post_reg()">注册</button>
+  <div id="d1"></div>
+ </body>
+</html>

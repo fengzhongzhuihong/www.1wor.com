@@ -1,7 +1,429 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head></head>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.css" />
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>衣全球(1WOR.CN)全球原创设计师品牌与生活方式精品购物社区</title>
+    <script src="js/vue.js"></script>
+  
+
+</head>
+
 <body>
-this is a text  111
+    <iframe src="header.html" frameborder="0" width=100% height="167px" marginwidth=0 marginheight=0 frameborder="no"
+        border="0"></iframe>
+<div id="app">
+    <div class="col-12 text-center">
+        <p class="mt-2">SALE | Stella McCartney、Off-White和Rick Owens等人气设计师品牌重磅加入</p>
+    </div>
+    <div id="top">
+        <div><img src="img/fc34870a4481467938a2334962381b15ac28ec43.jpg" alt=""></div>
+        <div><img src="img/f086aa7af0ceb869fc182007591ac464b42bce26.jpg" alt=""></div>
+    </div>
+    <div id="nav">
+        <div id="nav_l">
+            <ul>
+                <li><a href="#1f">上新</a></li>
+                <li><a href="#2f">热销</a></li>
+                <li><a href="#3f">鞋履</a></li>
+                <li><a href="#4f">配饰</a></li>
+                <li><a href="#5f">上衣</a></li>
+                <li><a href="#6f">时尚包包</a></li>
+            </ul>
+        </div>
+        <div id="nav_r">
+            <ul>
+                <li><a href="#1f">上新</a></li>
+                <li><a href="#2f">热销</a></li>
+                <li><a href="#3f">鞋履</a></li>
+                <li><a href="#4f">配饰</a></li>
+                <li><a href="#5f">上衣</a></li>
+                <li><a href="#6f">时尚包包</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="nav2">
+        <ul>
+            <li>
+                <h2>1wor</h2><a href="" title=""><a href="">秋冬新款 女士 喇叭袖套头衬衫</a></a>
+            </li>
+            <li>
+                <h2>Hot Heart</h2><a href="" title="">春季新款 男士 休闲裤子</a>
+            </li>
+            <li>
+                <h2>UltraTime</h2><a href="" title="">冬季新款 男士 石英表</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tuijian_list" id="1f">
+        <div>
+            <img src="img/computer_icon.png" alt=""><span class="s1">编辑推荐 时尚上新 /1F</span>
+            <p class="more_list"><img src="img/girls-2.jpg" alt=""><a href="">查看更多...<<</a> </p> </div> <div class="list_flex">
+                        <div class="tuijian_list_l">
+                            <img src="img/6f5116e2f2058d36e96a94cfecb5d4d5933a4bc7.jpg" alt="" class="img_lg">
+                        </div>
+                        <div class="carousel" id="lunbo" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/list_1.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_2.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_3.jpg" class=" " alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_4.jpg" class=" " alt="" />
+                                </div>
+                            </div>
+                            <a href="#lunbo" class="carousel-control-prev" data-slide="prew"><span
+                                    class="carousel-control-prev-icon"></span></a>
+                            <a href="#lunbo" class="carousel-control-next" data-slide="next"><span
+                                    class="carousel-control-next-icon"></span></a>
+                        </div>
+
+        </div>
+        <div>
+            <div class="list" @mouseover="show_img" @mouseleave="img_hidden"><img src="img/women/0117ee6478143199d7e1e14a3477eeada8a8d3f6.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计连衣裙</a></h3>
+                <p><span class="price">抢购价：￥999</span> <img src="img/fa-cart.png" alt="" id="img_show"></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/1eeca5d42f90eddaa37cb0679970973173bca8e7.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计气质短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/879aa26efffe460705f480a63f393c51a210ce8b.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计白色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/5c22af5a759316a055d055baa290f11d615ba5f2.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计黑色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+        </div>
+    </div>
+    <div class="tuijian_list" id="2f">
+        <div>
+            <img src="img/computer_icon.png" alt=""><span class="s1">编辑推荐 时尚热销 /2F</span>
+            <p class="more_list"><img src="img/girls-2.jpg" alt=""><a href="">查看更多...<<</a> </p> </div> <div
+                        class="list_flex">
+                        <div class="tuijian_list_l">
+                            <img src="img/6f5116e2f2058d36e96a94cfecb5d4d5933a4bc7.jpg" alt="" class="img_lg">
+                        </div>
+                        <div class="carousel" id="lunbo" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/list_1.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_2.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_3.jpg" class=" " alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_4.jpg" class=" " alt="" />
+                                </div>
+                            </div>
+                            <a href="#lunbo" class="carousel-control-prev" data-slide="prew"><span
+                                    class="carousel-control-prev-icon"></span></a>
+                            <a href="#lunbo" class="carousel-control-next" data-slide="next"><span
+                                    class="carousel-control-next-icon"></span></a>
+                        </div>
+
+        </div>
+        <div>
+            <div class="list"><img src="img/women/0117ee6478143199d7e1e14a3477eeada8a8d3f6.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计连衣裙</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/1eeca5d42f90eddaa37cb0679970973173bca8e7.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计气质短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/879aa26efffe460705f480a63f393c51a210ce8b.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计白色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/5c22af5a759316a055d055baa290f11d615ba5f2.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计黑色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+        </div>
+    </div>
+    <div class="tuijian_list" id="3f">
+        <div>
+            <img src="img/computer_icon.png" alt=""><span class="s1">编辑推荐 时尚鞋履 /3F</span>
+            <p class="more_list"><img src="img/girls-2.jpg" alt=""><a href="">查看更多...<<</a> </p> </div> <div
+                        class="list_flex">
+                        <div class="tuijian_list_l">
+                            <img src="img/6f5116e2f2058d36e96a94cfecb5d4d5933a4bc7.jpg" alt="" class="img_lg">
+                        </div>
+                        <div class="carousel" id="lunbo" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/list_1.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_2.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_3.jpg" class=" " alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_4.jpg" class=" " alt="" />
+                                </div>
+                            </div>
+                            <a href="#lunbo" class="carousel-control-prev" data-slide="prew"><span
+                                    class="carousel-control-prev-icon"></span></a>
+                            <a href="#lunbo" class="carousel-control-next" data-slide="next"><span
+                                    class="carousel-control-next-icon"></span></a>
+                        </div>
+
+        </div>
+        <div>
+            <div class="list"><img src="img/women/0117ee6478143199d7e1e14a3477eeada8a8d3f6.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计连衣裙</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/1eeca5d42f90eddaa37cb0679970973173bca8e7.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计气质短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/879aa26efffe460705f480a63f393c51a210ce8b.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计白色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/5c22af5a759316a055d055baa290f11d615ba5f2.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计黑色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+        </div>
+    </div>
+    <div class="tuijian_list" id="4f">
+        <div>
+            <img src="img/computer_icon.png" alt=""><span class="s1">编辑推荐 时尚配饰 /4F</span>
+            <p class="more_list"><img src="img/girls-2.jpg" alt=""><a href="">查看更多...<<</a> </p> </div> <div
+                        class="list_flex">
+                        <div class="tuijian_list_l">
+                            <img src="img/6f5116e2f2058d36e96a94cfecb5d4d5933a4bc7.jpg" alt="" class="img_lg">
+                        </div>
+                        <div class="carousel" id="lunbo" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/list_1.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_2.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_3.jpg" class=" " alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_4.jpg" class=" " alt="" />
+                                </div>
+                            </div>
+                            <a href="#lunbo" class="carousel-control-prev" data-slide="prew"><span
+                                    class="carousel-control-prev-icon"></span></a>
+                            <a href="#lunbo" class="carousel-control-next" data-slide="next"><span
+                                    class="carousel-control-next-icon"></span></a>
+                        </div>
+
+        </div>
+        <div>
+            <div class="list"><img src="img/women/0117ee6478143199d7e1e14a3477eeada8a8d3f6.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计连衣裙</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/1eeca5d42f90eddaa37cb0679970973173bca8e7.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计气质短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/879aa26efffe460705f480a63f393c51a210ce8b.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计白色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/5c22af5a759316a055d055baa290f11d615ba5f2.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计黑色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+        </div>
+    </div>
+    <div class="tuijian_list" id="5f">
+        <div>
+            <img src="img/computer_icon.png" alt=""><span class="s1">编辑推荐 时尚上衣 /5F</span>
+            <p class="more_list"><img src="img/girls-2.jpg" alt=""><a href="">查看更多...<<</a> </p> </div> <div
+                        class="list_flex">
+                        <div class="tuijian_list_l">
+                            <img src="img/6f5116e2f2058d36e96a94cfecb5d4d5933a4bc7.jpg" alt="" class="img_lg">
+                        </div>
+                        <div class="carousel" id="lunbo" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/list_1.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_2.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_3.jpg" class=" " alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_4.jpg" class=" " alt="" />
+                                </div>
+                            </div>
+                            <a href="#lunbo" class="carousel-control-prev" data-slide="prew"><span
+                                    class="carousel-control-prev-icon"></span></a>
+                            <a href="#lunbo" class="carousel-control-next" data-slide="next"><span
+                                    class="carousel-control-next-icon"></span></a>
+                        </div>
+
+        </div>
+        <div>
+            <div class="list"><img src="img/women/0117ee6478143199d7e1e14a3477eeada8a8d3f6.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计连衣裙</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/1eeca5d42f90eddaa37cb0679970973173bca8e7.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计气质短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/879aa26efffe460705f480a63f393c51a210ce8b.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计白色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/5c22af5a759316a055d055baa290f11d615ba5f2.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计黑色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+        </div>
+    </div>
+    <div class="tuijian_list" id="6f">
+        <div>
+            <img src="img/computer_icon.png" alt=""><span class="s1">编辑推荐 时尚包包 /6F</span>
+            <p class="more_list"><img src="img/girls-2.jpg" alt=""><a href="">查看更多...<<</a> </p> </div> <div
+                        class="list_flex">
+                        <div class="tuijian_list_l">
+                            <img src="img/6f5116e2f2058d36e96a94cfecb5d4d5933a4bc7.jpg" alt="" class="img_lg">
+                        </div>
+                        <div class="carousel" id="lunbo" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/list_1.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_2.jpg" class="" alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_3.jpg" class=" " alt="" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/list_4.jpg" class=" " alt="" />
+                                </div>
+                            </div>
+                            <a href="#lunbo" class="carousel-control-prev" data-slide="prew"><span
+                                    class="carousel-control-prev-icon"></span></a>
+                            <a href="#lunbo" class="carousel-control-next" data-slide="next"><span
+                                    class="carousel-control-next-icon"></span></a>
+                        </div>
+
+        </div>
+        <div>
+            <div class="list"><img src="img/women/0117ee6478143199d7e1e14a3477eeada8a8d3f6.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计连衣裙</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/1eeca5d42f90eddaa37cb0679970973173bca8e7.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计气质短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/879aa26efffe460705f480a63f393c51a210ce8b.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计白色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+            <div class="list"><img src="img/women/5c22af5a759316a055d055baa290f11d615ba5f2.jpg" alt="">
+                <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计黑色短袖</a></h3>
+                <p><span class="price">抢购价：￥999</span></p>
+                <p><s>市场价：￥999</s></p>
+            </div>
+        </div>
+    </div>
+    <div id="list">
+        <div class="list"><img src="img/man/1c20dfb9cc44c15a50763644083c41b953bd75ed.jpg" alt="">
+            <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">HINITOMY男士沙感白色清凉短袖</a></h3>
+            <p><span class="price">抢购价：￥999</span></p>
+            <p><s>市场价：￥999</s></p>
+        </div>
+        <div class="list"><img src="img/man/4b5641d6e79edfcf35fc14d9a2522a55e9661ce4.jpg" alt="">
+            <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">HINITOMY男士黑色气质外套</a></h3>
+            <p><span class="price">抢购价：￥999</span></p>
+            <p><s>市场价：￥999</s></p>
+        </div>
+        <div class="list"><img src="img/man/5e7663e304cc93dbff2fb3d2fed2d78d3639044d.jpg" alt="">
+            <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">HINITOMY男士黑色运动外套</a></h3>
+            <p><span class="price">抢购价：￥999</span></p>
+            <p><s>市场价：￥999</s></p>
+        </div>
+        <div class="list"><img src="img/man/6a95b71e5dbe093c526a5c2d3490005a97558b51.jpg" alt="">
+            <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">HINITOMY男士沙感白色清凉衬衣</a></h3>
+            <p><span class="price">抢购价：￥999</span></p>
+            <p><s>市场价：￥999</s></p>
+        </div>
+        <div class="list"><img src="img/women/0117ee6478143199d7e1e14a3477eeada8a8d3f6.jpg" alt="">
+            <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计连衣裙</a></h3>
+            <p><span class="price">抢购价：￥999</span></p>
+            <p><s>市场价：￥999</s></p>
+        </div>
+        <div class="list"><img src="img/women/1eeca5d42f90eddaa37cb0679970973173bca8e7.jpg" alt="">
+            <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计气质短袖</a></h3>
+            <p><span class="price">抢购价：￥999</span></p>
+            <p><s>市场价：￥999</s></p>
+        </div>
+        <div class="list"><img src="img/women/879aa26efffe460705f480a63f393c51a210ce8b.jpg" alt="">
+            <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计白色短袖</a></h3>
+            <p><span class="price">抢购价：￥999</span></p>
+            <p><s>市场价：￥999</s></p>
+        </div>
+        <div class="list"><img src="img/women/5c22af5a759316a055d055baa290f11d615ba5f2.jpg" alt="">
+            <h3><a href="#" title="1WORY原创设计连衣裙AA192L4058">1WORY原创设计黑色短袖</a></h3>
+            <p><span class="price">抢购价：￥999</span></p>
+            <p><s>市场价：￥999</s></p>
+        </div>
+    </div>
+</div>
+    <div>
+        <iframe src="footer.html" frameborder="0" width=100% height="345px" marginwidth=0 marginheight=0
+            frameborder="no" border="0" class="" scrolling="no"></iframe></div> 
+             <script src="js/index.js"></script>
 </body>
+
 </html>

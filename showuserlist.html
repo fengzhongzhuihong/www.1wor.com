@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>new document </title>
+ <script>
+ function showuserlist(){
+ var xhr=new XMLHttpRequest;
+  xhr.onreadystatechange=function(){
+  console.log(xhr.readyState);
+        if(xhr.readyState==4&&xhr.status==200){
+           var result=xhr.responseText;
+//         d1.innerHTML=result;
+           //把json解析为对象数组
+           var arr=JSON.parse(result);
+           console.log(arr);
+           var strhtml=`<table border="1px" width="800px">
+           <tr>
+          <th>UID</th>
+          <th>登陆名称</th>
+          <th>电子邮箱</th>
+          <th>练习方式</th>
+          <th>真实姓名</th>
+          <th>用户性别</th>
+          <th>操作</th>
+           </tr>
+           `;
+for(var i=0;i<arr.length;i++){
+  strhtml+=`<tr>
+  <td>${arr[i].uid}</td>
+  <td>${arr[i].uname}</td>
+  <td>${arr[i].email}</td>
+  <td>${arr[i].phone}</td>
+  <td>${arr[i].user_name}</td>
+  <td>${arr[i].sex}</td>
+  <td>
+  <a href="javascript:deluser(${arr[i].uid})">删除</a> 
+  <a href="queryuser.html?uid=${arr[i].uid}">修改</a>
+  </td>
+  </tr>`;
+  }
+  strhtml+=`</table>`;
+  d1.innerHTML=strhtml;
+  }
+  }
+  xhr.open("get","/pro/v1/showuserlist",true);
+    //xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    //resfuul写法
+    //  xhr.open("get","/demo/login_01?uname="+$uname+"&upwd="+$upwd,true);//HTTP get写法
+    xhr.send(); 
+ }
+ function deluser($uid){
+ var xhr=new XMLHttpRequest;
+  xhr.onreadystatechange=function(){
+  console.log(xhr.readyState);
+        if(xhr.readyState==4&&xhr.status==200){
+          console.log(xhr.readyState);
+           var result=xhr.responseText; 
+           if(result==1){
+             alert("删除成功");
+           showuserlist();
+           }else{alert("删除失败");}
+  }
+  }
+  xhr.open("delete","/pro/v1/deluser/"+$uid,true);
+    //xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    //resfuul写法
+    //  xhr.open("get","/demo/login_01?uname="+$uname+"&upwd="+$upwd,true);//HTTP get写法
+    xhr.send(); 
+ }
+ </script>
+ </head>
+ <body onload="showuserlist()">
+<div id="d1"></div>
+ </body>
+</html>
