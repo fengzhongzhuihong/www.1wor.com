@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<script>
+  function getAjax(){
+   var xhr=new XMLHttpRequest();
+     xhr.onreadystatechange=function(){
+   console.log(xhr.readyState);
+   if(xhr.readyState==4&&xhr.status==200){
+   var result=xhr.responseText;
+   alert(result);
+
+
+   f(result=="1"){
+    alert("登陆成功");
+                 }
+  else if(result=="0"){
+    alert("用户不存在或者密码错误");
+                      }
+  else{
+    alert("未收到用户信息");
+      }
+
+
+
+   } 
+    }
+//   console.log(xhr);
+   xhr.open("get","/demo/ajaxDemo",true);
+   xhr.send();  
+   
+  }
+</script>
+
+</head>
+<body>
+  <button onclick="getAjax()">ajax</button>
+</body>
+</html>

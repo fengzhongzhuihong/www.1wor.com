@@ -1,0 +1,46 @@
+<!-- 文档类型的声明 -->
+<!doctype html>
+<!-- 网页结构 -->
+<html>
+  <!-- 页面头部信息  -->
+  <head>
+  <title></title>
+    <meta charset="utf-8">
+    <script>
+    function show(){
+     var users=[{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"},{uname:"dingding",email:"ding@qq.com",tel:"1234435",name:"zhuhongfei",sex:"男"}];
+      for( var i=0;i<=users.length;i++){
+       d1.innerHTML+=` 
+        <tr>
+        <td>${users[i].uname}</td>
+        <td>${users[i].email}</td>
+        <td>${users[i].tel}</td>
+        <td>${users[i].name}</td>
+        <td>${users[i].sex}</td>
+        <td> <a href="#">删除</a>
+        <a href="#">修改</a>
+        </td>
+        </tr>`;
+    }
+    </script>
+  </head>
+  <!-- 页面的主体 -->
+  <body>
+  
+  <button onclick="show()">SHOW</button> 
+     <div>
+     <table border="1px">
+       <tr>
+         <th>登陆名称</th>
+         <th>电子邮箱</th>
+         <th>联系方式</th>
+         <th>用户姓名</th>
+         <th>用户性别</th>
+         <th>操作</th>
+       </tr>
+       <tbody id="d1"></tbody>
+     </table>
+     
+     </div>
+  </body>
+</html>

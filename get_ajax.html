@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+  <script>
+  function post_reg(){
+    var $uname=uname.value;
+    var $upwd=upwd.value;
+    var $email=email.value;
+    var $phone=phone.value;
+  var xhr=new XMLHttpRequest;
+  xhr.onreadystatechange=function(){ 
+   if(xhr.readyState==4&&xhr.status==200){
+     console.log(xhr.readyState);
+   var result=xhr.responseText;
+   if(result==1){alert("注册成功");}else if(result==0){alert("用户名已存在");}
+   }
+  }
+  xhr.open("post","/demo/regpro",true);
+  var formdata="uname="+$uname+"&upwd="+$upwd+"&email="+$email+"&phone="+$phone;
+  //请求主体中有特殊字符，必须要改请求头 必须在open()和send()之间
+    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    xhr.send(formdata);
+    console.log(formdata);
+  }
+  </script>
+ </head>
+ <body>
+  <input type="text" id="uname">
+  <input type="text" id="upwd">
+  <input type="text" id="email">
+  <input type="text" id="phone">
+  <button onclick="post_reg()">show</button>
+  <div id="d1"></div>
+ </body>
+</html>

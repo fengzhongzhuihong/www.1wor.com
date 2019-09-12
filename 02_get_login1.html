@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<script>
+  function show(){
+    var $uname=d1.value;
+    var $upwd=d2.value;
+    console.log($uname,$upwd);
+   var xhr=new XMLHttpRequest();
+     xhr.onreadystatechange=function(){
+   console.log(xhr.readyState);
+   if(xhr.readyState==4&&xhr.status==200){
+   var result=xhr.responseText;
+   alert(result);
+   f(result===1){
+   alert("登陆成功");
+               }
+  else if(result===0){
+    alert("用户不存在或者密码错误");
+                      }
+  else{
+    alert("未收到用户信息");
+      } 
+     } 
+    }
+//   console.log(xhr);
+   xhr.open("get","/demo/02_get_login?uname="+$uname+"&upwd="+$upwd,true);
+   xhr.send();  
+   
+  }
+</script>
+</head>
+<body>
+  <input type="text" id="d1">
+  <input type="text" id="d2">
+<button onclick="show()">登录</button>
+</body>
+</html>

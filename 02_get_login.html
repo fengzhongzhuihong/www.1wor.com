@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:8080/login.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Document</title>
+</head>
+<body>
+<script>
+function show(){
+var $uname=uname.value;
+var $upwd=upwd.value;
+//console.log($uname,$upwd);
+var xhr=new XMLHttpRequest();
+console.log(xhr);
+xhr.onreadystatechange=function(){
+  if(xhr.readyState==4&&xhr.status==200){
+    console.log(xhr.readyState);
+  var result=xhr.responseText;
+  console.log(result);
+  if(result=="1"){alert("登陆成功");}else if(result=="0"){alert("用户不存在或者密码错误");}else{alert("未接受数数据");}
+  }
+  }
+  xhr.open("get","/demo/get_login?uname="+$uname+"&upwd="+$upwd,true);
+  xhr.send(null);
+  }
+</script>
+  <input type="text" id="uname">
+  <input type="text" id="upwd">
+  <button onclick="show()">登陆</button>
+</body></html>

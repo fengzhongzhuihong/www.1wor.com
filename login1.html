@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+function show(){
+var $uname=uname.value;
+var $upwd=upwd.value;
+console.log($uname,$upwd);
+
+var xhr=new XMLHttpRequest();
+console.log(xhr.readyState);
+xhr.onreadystatechange=function(){
+  if(xhr.readyState==4&&xhr.status==400){
+  var result=xhr.responseText;
+  if(result=="1"){}
+  }
+  }
+  xhr.open("get","/demo/get_login?uname="+$uname+"&upwd="+$upwd,true);
+  xhr.send(null);
+  }
+</script>
+  <input type="text" id="uname">
+  <input type="text" id="upwd">
+  <button onclick="show()">登陆</button>
+</body>
+</html>

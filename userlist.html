@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+  <script>
+ function userlist(){
+  var xhr=new XMLHttpRequest;
+  xhr.onreadystatechange=function(){
+console.log(xhr.readyState);
+        if(xhr.readyState==4&&xhr.status==200){
+           var result=xhr.responseText;
+//         d1.innerHTML=result;
+           //把json解析为对象数组
+           var arr=JSON.parse(result);
+           console.log(arr);
+      var str=`<table border="1px">
+        <tr>
+          <th>登陆名称</th>
+          <th>电子邮箱</th>
+          <th>练习方式</th>
+          <th>真实姓名</th>
+          <th>用户姓名</th>
+          <th>操作</th>
+        </tr>`;
+for(var i=0;i<arr.length;i++){
+    str+=`<tr>
+    <td>${arr[i].uname}</td>
+    <td>${arr[i].email}</td>
+    <td>${arr[i].phone}</td>
+    <td>${arr[i].user_name}</td>
+    <td>${arr[i].sex}</td>
+    <td>
+    <a href="#">删除</a> 
+    <a href="#">修改</a>
+    </td>
+    </tr>
+   `;
+}
+str+=`</table>`;
+d1.innerHTML=str;
+        }
+  }
+    xhr.open("get","/demo/userlist",true);
+    //resfuul写法
+    //  xhr.open("get","/demo/login_01?uname="+$uname+"&upwd="+$upwd,true);//HTTP get写法
+    xhr.send();
+  }
+  </script>
+ </head>
+ <body>
+<button onclick="userlist()">查询所有用户</button>
+<div id="d1"></div>
+ </body>
+</html>

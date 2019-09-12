@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+ <script>
+ function getXML(){
+ var xhr=new XMLHttpRequest();
+ xhr.onreadystatechange=function(){
+  if(xhr.readyState==4&&xhr.status==200){
+  var result=xhr.responseXML;
+ console.log(result);
+ var userlist=result.getElementsByTagName("userlist");
+ var user=userlist[0].getElementsByTagName("user");
+ var name=user[1].getElementsByTagName("uname");
+ console.log(name[0].innerHTML);
+  }
+  }
+ xhr.open("get","xml01.xml",true);
+ xhr.send();
+ }
+ </script>
+ </head>
+
+ <body>
+ <button onclick="getXML()">获取</button>
+ </body>
+</html>
